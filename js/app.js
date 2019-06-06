@@ -1,4 +1,4 @@
-var app = new Vue({
+const app = new Vue({
   el: '#app',
   data: {
     storageKey: 'todolist',
@@ -22,7 +22,7 @@ var app = new Vue({
     }
   },
   created: function(){
-    var dataStr = localStorage.getItem(this.storageKey);
+    const dataStr = localStorage.getItem(this.storageKey);
     if(dataStr){
       this.todolist = JSON.parse(dataStr);
     }
